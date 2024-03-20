@@ -1,0 +1,62 @@
+body {
+  background: linear-gradient(#615dad, #ffc8da);
+  height: 100vh;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.card {
+  width: 400px;
+  margin: 50px auto;
+}
+
+.card__image {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+  display: block;
+}
+
+.card__headline {
+  font-family: "Lobster";
+  font-size: 50px;
+  margin: 20px auto;
+}
+
+.card__text {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #283e50;
+  color: white;
+  padding: 25px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.card__buttons {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.card__buttons--rules {
+  background: #1fcca4;
+  padding: 20px;
+}
+
+.card__buttons--rules:hover {
+  background: #1cbb96;
+}
+
+.card__buttons--play {
+  background: #0197f6;
+  padding: 20px;
+  border-top: solid 1px #283e50;
+}
+
+.card__buttons--play:hover {
+  background: #0090e9;
+}
