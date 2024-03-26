@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(#615dad, #ffc8da);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 a {
@@ -10,13 +10,15 @@ a {
 
 .card {
   width: 385px;
-  margin: 20px auto;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .card__image {
   max-width: 100%;
   border-radius: 10px 10px 0 0;
-  display: block;
+  /* display: block; */
 }
 
 .card__headline {
