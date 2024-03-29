@@ -88,15 +88,6 @@ a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.game__menu--players {
-  display: flex;
-  flex-direction: row;
-}
-
-.game__menu--icons {
-  display: flex;
-  align-items: center;
-}
 .game__menu--buttons {
   padding: 10px;
   border-radius: 15%;
