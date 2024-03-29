@@ -62,3 +62,67 @@ a {
 .card__buttons--play:hover {
   background: #0090e9;
 }
+
+.game__headline {
+  font-family: "Lobster";
+  font-size: 50px;
+  color: white;
+  margin: 10px auto;
+}
+
+/* styly pro hra.html */
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80vmin;
+  margin: 10px auto;
+}
+.game__menu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game__menu--players {
+  display: flex;
+  flex-direction: row;
+}
+
+.game__menu--icons {
+  display: flex;
+  align-items: center;
+}
+.game__menu--buttons {
+  padding: 10px;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+.button__home {
+background-color: #1fcca4;
+}
+
+.button__restart {
+  background-color:#0090e9;
+}
+
+.game__board {
+  display: flex;
+  flex-wrap: wrap;
+  border: #39376d 0.5px solid;
+}
+.game__board--square {
+flex-basis: 10%;
+aspect-ratio: 1/1;
+opacity: 0.5;
+cursor: pointer;
+}
+
+.game__board--square:hover {
+opacity: 0.65;
+  }
