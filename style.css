@@ -79,6 +79,7 @@ a {
   max-width: 80vmin;
   margin: 10px auto;
 }
+
 .game__menu {
   display: flex;
   justify-content: space-between;
@@ -104,25 +105,57 @@ a {
 }
 
 .button__home {
-background-color: #1fcca4;
+  background-color: #1fcca4;
 }
 
 .button__restart {
-  background-color:#0090e9;
+  background-color: #0090e9;
 }
 
 .game__board {
   display: flex;
   flex-wrap: wrap;
-  border: #39376d 0.5px solid;
-}
-.game__board--square {
-flex-basis: 10%;
-aspect-ratio: 1 / 1;
-opacity: 0.5;
-cursor: pointer;
+  border: #283e50 1px solid;
 }
 
-.game__board--square:hover, .game__board--square:focus {
-opacity: 0.7;
+.game__board--square {
+  flex-basis: 10%;
+  aspect-ratio: 1 / 1;
+  background-color: #bbb0d6;
+  border: #283e50 1px solid;
+  cursor: pointer;
+}
+
+.game__board--square:hover,
+.game__board--square:focus {
+  opacity: 0.7;
+}
+
+.game__board--circle {
+  background-image: url(ikony/circle-black.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  animation: grow 0.3s forwards;
+}
+
+.game__board--cross {
+  background-image: url(ikony/cross-black.svg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  animation: grow 0.3s forwards;
+}
+
+/* nastylování animace cross / circle */
+@keyframes grow {
+  from {
+    background-size: 0;
+    /* Začíná s nulovou velikostí */
   }
+
+  to {
+    background-size: 1;
+    /* Končí plnou velikostí */
+  }
+}
