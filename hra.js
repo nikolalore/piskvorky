@@ -48,7 +48,7 @@ document
 document
   .querySelector('.button__restart')
   .addEventListener('click', (event) => {
-    if (!confirm('Opravdu chcete začít znovu')) {
+    if (!confirm('Opravdu chcete začít znovu?')) {
       event.preventDefault();
     }
   });
