@@ -159,3 +159,7 @@ a {
     /* Končí plnou velikostí */
   }
 }
+
+button:disabled {
+  cursor: auto
+}
