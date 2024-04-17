@@ -42,6 +42,11 @@ const selectButton = (event) => {
   setTimeout(findingWinner, 400);
 };
 
+const gameButtons = document.querySelectorAll('.game__board--square');
+gameButtons.forEach((button) => {
+  button.addEventListener('click', selectButton);
+});
+
 document
   .querySelector('.button__restart')
   .addEventListener('click', (event) => {
@@ -50,7 +55,3 @@ document
     }
   });
 
-const gameButtons = document.querySelectorAll('.game__board--square');
-gameButtons.forEach((button) => {
-  button.addEventListener('click', selectButton);
-});
