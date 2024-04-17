@@ -1,3 +1,5 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
 let currentPlayer = 'circle';
 
 const selectButton = (event) => {
@@ -12,38 +14,33 @@ const selectButton = (event) => {
     document.querySelector('.game__menu--icon').src = 'ikony/circle.svg';
     currentPlayer = 'circle';
   }
-};
 
-document
-  .querySelector('button:nth-child(1)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(2)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(3)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(4)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(5)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(6)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(7)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(8)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(9)')
-  .addEventListener('click', selectButton);
-document
-  .querySelector('button:nth-child(10)')
-  .addEventListener('click', selectButton);
+  const gameBoardElm = Array.from(gameButtons);
+  const gameBoard = gameBoardElm.map((button) => {
+    if (button.classList.contains('game__board--circle')) {
+      return 'o';
+    } else if (button.classList.contains('game__board--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
+
+  const findingWinner = () => {
+    const winner = findWinner(gameBoard);
+    if (winner === 'o') {
+      alert(`Vyhrálo kolečko!`);
+      location.reload();
+    } else if (winner === 'x') {
+      alert('Vyhrál křížek!');
+      location.reload();
+    } else if (winner === 'tie') {
+      alert('Je to remíza!');
+      location.reload();
+    }
+  };
+  setTimeout(findingWinner, 400);
+};
 
 document
   .querySelector('.button__restart')
@@ -52,3 +49,8 @@ document
       event.preventDefault();
     }
   });
+
+const gameButtons = document.querySelectorAll('.game__board--square');
+gameButtons.forEach((button) => {
+  button.addEventListener('click', selectButton);
+});
